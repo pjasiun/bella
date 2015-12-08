@@ -17,12 +17,12 @@
                         [
                             {
                                 "command": "open_file",
-                                "args": { "file": "${packages}/Bella/Bella.sublime-settings" },
+                                "args": { "file": "${packages}/Bella/bella.sublime-settings" },
                                 "caption": "Settings – Default"
                             },
                             {
                                 "command": "open_file",
-                                "args": { "file": "${packages}/User/Bella.sublime-settings" },
+                                "args": { "file": "${packages}/User/bella.sublime-settings" },
                                 "caption": "Settings – User"
                             },
                             {
