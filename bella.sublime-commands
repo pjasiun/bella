@@ -1,0 +1,4 @@
+[
+    { "caption": "Bella: Format File", "command": "bella_format" },
+    { "caption": "Bella: Format All Files In Project", "command": "bella_format_all" }
+]

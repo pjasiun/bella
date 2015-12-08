@@ -1,0 +1,9 @@
+{
+	"run_on_save": false,
+
+	// Configuration for "apply to all" command. At this moment I do not want to
+	// apply it on Sublime project paths. "apply to all" works on "project_path"
+	// and ignore paths contain anything form ignore list.
+	"project_path": "/path/to/your/project/",
+	"ignore": [ "/.git/", "plugins/uicolor/yui/yui.js" ]
+}
