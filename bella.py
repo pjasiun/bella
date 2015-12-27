@@ -1,7 +1,7 @@
 import sublime, sublime_plugin, os, re
 
-from formatter import *
-import merge_utils
+from .formatter import *
+from . import merge_utils
 
 def is_js_context( view ):
 	fName = view.file_name()
@@ -112,7 +112,7 @@ class bellaFormatAllCommand( sublime_plugin.TextCommand ):
 
 
 	def format_js_files( self, path ):
-		print 'Formatting file: \'%s\'' % path
+		print('Formatting file: \'%s\'' % path)
 
 		# Read.
 		with open( path, 'r' ) as hSource:
