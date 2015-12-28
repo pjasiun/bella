@@ -104,7 +104,7 @@ class JsPart():
 			# This could be a placehoder so it could be comment.
 			if code[ index ] == '|':
 				try:
-					token = re.finditer( r'\|BellaToken\d+.\|$', code[ : index + 1 ] ).next()
+					token = re.finditer( r'\|BellaToken\d+.\|$', code[ : index + 1 ] ).__next__()
 					if code[ token.end() - 2 ] != 'c':
 						# If it is not a comment this is not regexp.
 						return False
@@ -136,7 +136,7 @@ class JsPart():
 		# Get the position of the end of regexp.
 		if regex:
 			try:
-				regex_pos = re.finditer( regex, code ).next().end()
+				regex_pos = re.finditer( regex, code ).__next__().end()
 			except StopIteration:
 				pass
 
