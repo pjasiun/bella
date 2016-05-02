@@ -67,6 +67,11 @@ class JsPart():
 				end = self.find_end_possition( code[ index: ], r'([^\\]\')', True )
 				code = self.replace_by_placehoder( code, index, index + end, 's' )
 
+			# Strings using '
+			if code[ index ] == '`':
+				end = self.find_end_possition( code[ index: ], r'([^\\]`)', True )
+				code = self.replace_by_placehoder( code, index, index + end, 's' )
+
 			# Strings using "
 			if code[ index ] == '\"':
 				end = self.find_end_possition( code[ index: ], r'([^\\]\")', True )
@@ -206,7 +211,7 @@ class JsPart():
 		code = re.sub( r'\{\{', r'{ {', code )
 
 		# Add spaced after keywords
-		code = re.sub( r'(if|catch|for|while|with|return|switch)\(', r'\1 (', code ) #'
+		code = re.sub( r'(if|for|while|with|return|switch)\(', r'\1 (', code ) #'
 
 		# Handle a ternary operator, ex. x:0?1; -> x : 0 ? 1;
 		# TODO: true ? { a: 1 } : b
