@@ -211,7 +211,7 @@ class JsPart():
 		code = re.sub( r'\{\{', r'{ {', code )
 
 		# Add spaced after keywords
-		code = re.sub( r'(if|for|while|with|return|switch)\(', r'\1 (', code ) #'
+		code = re.sub( r'(if|for|while|with|return|switch|catch)\(', r'\1 (', code ) #'
 
 		# Handle a ternary operator, ex. x:0?1; -> x : 0 ? 1;
 		# TODO: true ? { a: 1 } : b
